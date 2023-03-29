@@ -21,10 +21,10 @@ COPY    ./ ${TEMP_DIR}/
 ## Install dependencies
 RUN \
         if [ "$GPU" = "TRUE" ] ; then \
-                ${TEMP_DIR}/misc/install_nvidia_driver.sh --docker ; \
-                ${TEMP_DIR}/misc/prerequisites.sh  --enable-nvc ; \
+        ${TEMP_DIR}/misc/install_nvidia_driver.sh --docker ; \
+        ${TEMP_DIR}/misc/prerequisites.sh  --enable-nvc ; \
         else \
-                ${TEMP_DIR}/misc/prerequisites.sh ; \
+        ${TEMP_DIR}/misc/prerequisites.sh ; \
         fi
 
 ## Build OvenMediaEngine
